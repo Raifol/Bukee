@@ -5,3 +5,133 @@
 @import "base/fonts";
 @import "base/general";
 @import "../blocks/modules";
+
+$white-color: white;
+$accent-color: #65e496;
+
+
+body {
+  font-family: 'Roboto Slab', serif;
+  //font-family: 'Open Sans', sans-serif;
+}
+
+.wrapp {
+  max-width: 1170px;
+  margin: 0 auto;
+}
+
+.main-page {
+  background-image: url(../img/bg.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  color: $white-color;
+  padding-bottom: 155px;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1170px;
+  padding-top: 50px;
+  margin: 0 auto;
+  &__logo {
+    display: block;
+    background-image: url(../img/svg/logo.svg);
+    background-repeat: no-repeat;
+    width: 137px;
+    height: 28px;
+  }
+
+  &-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: flex-end;
+    font-family: 'Open Sans', sans-serif;
+
+    &__li {
+      margin-left: 20px;
+      padding-bottom: 5px;
+      border-bottom: 3px solid transparent;
+      transition: 0.3s;
+      &:hover {
+        border-bottom: 3px solid $accent-color;
+      }
+    }
+    &__li.active {
+      border-bottom: 3px solid $accent-color;
+    }
+    &__link {
+      text-decoration: none;
+      color: $white-color;
+      letter-spacing: 0.8px;
+    }
+  }
+}
+
+.block-text {
+  flex-basis: calc(93% - 500px);
+  margin-left: 53px;
+  &__name {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 18px;
+    letter-spacing: 0.7px;
+    margin-top: 0px;
+  }
+  &__title {
+    font-size: 48px;
+    font-weight: 700;
+    margin-top: 30px;
+    letter-spacing: 1.1px;
+    margin-bottom: 40px;
+    span {
+      display: block;
+      color: #65e496;
+      font-size: 18px;
+      margin-top: 10px;
+      letter-spacing: 1.3px;
+      font-weight: 400;
+    }
+  }
+  &__main-text {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 15px;
+    line-height: 24px;
+    letter-spacing: 0.75px;
+    margin-bottom: 25px;
+  }
+  &__btn {
+    display: block;
+    background-color: #65e496;
+    color: $white-color;
+    font-size: 18px;
+    text-decoration: none;
+    max-width: 250px;
+    text-align: center;
+    padding: 14px 0px;
+    border-radius: 3px;
+    margin-top: 46px;
+    margin-bottom: 20px;
+    letter-spacing: 0.7px;
+  }
+  small {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 12px;
+    font-style: italic;
+    letter-spacing: 0.6px;
+  }
+}
+
+.block-book {
+  display: flex;
+  justify-content: flex-start;
+  margin-top: 178px;
+  &-demo {
+    display: block;
+    width: 447px;
+    height: 643px;
+    background-image: url(../img/svg/book.svg);
+    background-repeat: no-repeat;
+    flex-basis: 447px;
+  }
+}
