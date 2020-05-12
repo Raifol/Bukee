@@ -135,3 +135,34 @@ body {
     flex-basis: 447px;
   }
 }
+.page {
+  margin-top: 161px;
+}
+.block-author {
+  display: flex;
+  justify-content: space-between;
+  
+}
+.block-text{
+  &_left {
+  margin-left: 0px;
+  }
+  &__name_top {
+    margin-top: 16px;
+  }
+  &__title_author{
+    margin-top: 20px;
+  }
+}
+.block-ava {
+  position: relative;
+  &__svg {
+    position: absolute;
+    z-index: -1;
+    right: 0;
+  }
+  &__img {
+    margin-top: 45px;
+    margin-right: 45px;
+  }
+}
